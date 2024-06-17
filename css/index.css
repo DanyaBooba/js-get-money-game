@@ -2,4 +2,10 @@
 
 @import "allcash.css";
 
-@import "button-group.css"
+@import "button-group.css";
+
+@import "button-price.css";
+
+@import "game-info.css";
+
+@import "robot.css";

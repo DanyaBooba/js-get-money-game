@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     gap: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .button-group button {
@@ -31,6 +31,18 @@
     border-color: #ff3c3c;
 }
 
+.button-group button#button-half:focus-visible {
+    outline: .5em solid #423dff88;
+}
+
+.button-group button#button-add:focus-visible {
+    outline: .5em solid #2ed44b88;
+}
+
+.button-group button#button-boost:focus-visible {
+    outline: .5em solid #ff3c3c88;
+}
+
 @media(hover: hover) {
     .button-group button#button-half:hover {
         background-color: #423dff33;
@@ -46,15 +58,38 @@
 }
 
 @media(hover: none) {
-    .button-group button#button-half:hover {
+    .button-group button#button-half:active {
         background-color: #423dff33;
     }
 
-    .button-group button#button-add:hover {
+    .button-group button#button-add:active {
         background-color: #2ed44b33;
     }
 
-    .button-group button#button-boost:hover {
+    .button-group button#button-boost:active {
         background-color: #ff3c3c33;
+    }
+}
+
+@media(max-width: 425px) {
+    .button-group {
+        flex-direction: column;
+        gap: 0 !important;
+    }
+    .button-group button {
+        margin-bottom: .5rem;
+        flex: auto !important;
+    }
+
+    .button-group button#button-half {
+        order: 100 !important;
+    }
+
+    .button-group button#button-add {
+        order: 90 !important;
+    }
+
+    .button-group button#button-boost {
+        order: 110 !important;
     }
 }

@@ -1,1 +1,2 @@
 updateUI()
+buttonsSetFunc()
