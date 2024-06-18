@@ -32,7 +32,7 @@
         background-color: #1d4e3833;
     }
 
-    .game-info ul li:hover::before {
+    /* .game-info ul li:hover::before {
         border-bottom: .2em dotted #1d4e3800 !important;
-    }
+    } */
 }

@@ -7,8 +7,18 @@ const updateMoney = () => {
 }
 
 const updateButtonMoneyType = () => {
-    const price = `<span class="button__price">100 ${moneyType()}</span>`
+    const price = `<span class="button__price">${moneyPriceAuto()} ${moneyType()}</span>`
     document.querySelector('.button-group button#button-boost').innerHTML = `+ 1 ${moneyType()}/сек. ${price}`
+}
+
+const updateAuto = () => {
+    const robot = document.querySelector('.body__right .robot')
+    if(statusPrice() > 0) robot.innerHTML = `<div>+ ${statusPrice()} ${moneyType()}/сек.</div>`
+}
+
+const updateButtonHalf = () => {
+    const price = `<span class="button__price">от 100 ${moneyType()}</span>`
+    document.querySelector('.button-half').innerHTML = `${price}`
 }
 
 const updateGameInfo = () => {
@@ -24,7 +34,8 @@ const updateGameInfo = () => {
 const updateUI = () => {
     updateMoney()
     updateButtonMoneyType()
+    updateAuto()
     updateGameInfo()
 }
 
-title();
+title()

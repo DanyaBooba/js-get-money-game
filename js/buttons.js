@@ -4,14 +4,22 @@ const buttonHalf = () => {
     if (moneyCount() < 100) {
         alert(`Необходимо как минимум 100 ${moneyType()}`)
     } else {
-        console.log(random())
         moneySet(random() ? moneyCount() * 2 : +(moneyCount() / 2))
     }
 }
 
 const buttonAdd = () => moneyAdd(1)
 
-const buttonBoost = () => console.log('add')
+const buttonBoost = () => {
+    let money = moneyCount()
+    let price = moneyPriceAuto()
+    if (money - price >= 0) {
+        moneyBuy(price)
+        priceAdd()
+    } else {
+        console.log('no money')
+    }
+}
 
 const buttonsSetFunc = () => {
     document.querySelector('button#button-half').onclick = () => {
