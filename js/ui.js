@@ -22,13 +22,12 @@ const updateButtonHalf = () => {
 }
 
 const updateGameInfo = () => {
-    document.querySelector('.game-info').innerHTML = `
-    <ul>
-      <li>прошло:<span>data</span></li>
-      <li>кликов:<span>data</span></li>
-      <li>клик./сек.:<span>data</span></li>
-      <li>за это время можно было:<span>сделать матанализ 10 раз</span></li>
-    </ul>`;
+    document.querySelector('#game-info-time').innerHTML = `прошло:<span>${timeValue()} сек.</span>`
+    document.querySelector('#game-info-clicks').innerHTML = `кликов:<span>${clickValue()}</span>`
+}
+
+const updateGameInfoWhatCanDo = () => {
+    document.querySelector('#game-info-whatcando').innerHTML = `за это время можно было:<span>${whatCanDo()}</span>`
 }
 
 const updateUI = () => {
@@ -39,3 +38,4 @@ const updateUI = () => {
 }
 
 title()
+updateGameInfoWhatCanDo()

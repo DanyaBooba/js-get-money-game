@@ -28,6 +28,7 @@ const buttonsSetFunc = () => {
     };
     document.querySelector('button#button-add').onclick = () => {
         buttonAdd()
+        click()
         updateUI()
     };
     document.querySelector('button#button-boost').onclick = () => {
