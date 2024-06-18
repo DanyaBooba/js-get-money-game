@@ -44,3 +44,5 @@ const priceAdd = () => {
 const priceSave = () => sessionStorage.setItem('_auto', priceAutoIndex)
 
 const randomValue = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
+
+const resetMoney = () => moneySet(0)

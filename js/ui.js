@@ -2,6 +2,11 @@ const title = () => {
     document.querySelector('title').textContent = 'JavaScript очень крут!'
 }
 
+const updateTextButtons = () => {
+    document.querySelector('#button-half').innerHTML = `50% шанс<span class="button__price">от 100 руб.</span>`
+    document.querySelector('#button-add').innerHTML = `+ деньги`
+}
+
 const updateMoney = () => {
     document.querySelector('.allcash').textContent = `${moneyCount()} ${moneyType()}`
 }
@@ -9,11 +14,6 @@ const updateMoney = () => {
 const updateButtonMoneyType = () => {
     const price = `<span class="button__price">${moneyPriceAuto()} ${moneyType()}</span>`
     document.querySelector('.button-group button#button-boost').innerHTML = `+ 1 ${moneyType()}/сек. ${price}`
-}
-
-const updateAuto = () => {
-    const robot = document.querySelector('.body__right .robot')
-    if(statusPrice() > 0) robot.innerHTML = `<div>+ ${statusPrice()} ${moneyType()}/сек.</div>`
 }
 
 const updateButtonHalf = () => {
@@ -30,6 +30,11 @@ const updateGameInfoWhatCanDo = () => {
     document.querySelector('#game-info-whatcando').innerHTML = `за это время можно было:<span>${whatCanDo()}</span>`
 }
 
+const updateAuto = () => {
+    const robot = document.querySelector('.body__right .robot')
+    if(statusPrice() > 0) robot.innerHTML = `<div>+ ${statusPrice()} ${moneyType()}/сек.</div>`
+}
+
 const updateUI = () => {
     updateMoney()
     updateButtonMoneyType()
@@ -37,5 +42,9 @@ const updateUI = () => {
     updateGameInfo()
 }
 
-title()
-updateGameInfoWhatCanDo()
+const onceUpdateUI = () => {
+    title()
+    updateUI()
+    updateGameInfoWhatCanDo()
+    updateTextButtons()
+}

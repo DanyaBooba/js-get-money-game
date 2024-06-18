@@ -1,4 +1,4 @@
-updateUI()
+onceUpdateUI()
 buttonsSetFunc()
 
 setInterval(function() {

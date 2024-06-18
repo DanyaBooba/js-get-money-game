@@ -1,8 +1,5 @@
 let statsTime = parseInt(sessionStorage.getItem('_stats_time') ?? 0)
 let statsClicks = parseInt(sessionStorage.getItem('_stats_click') ?? 0)
-// let timeWhatCanDo = 5
-// let countWhatCanDo = timeWhatCanDo
-// let indexWhatCanDo = randomValue(0, 10)
 
 const time = () => {
     statsTime += 1
@@ -34,7 +31,6 @@ const wordForm = (num, form1, form2, form3) => {
 }
 
 const whatCanDo = () => {
-    // countWhatCanDo += 1
     let value1 = randomValue(1, 10)
     let listWhatCanDo = [
         `научиться кричать как настоящий пират`,
@@ -49,8 +45,6 @@ const whatCanDo = () => {
         `провести чаепитие с плюшевыми мишками`,
         `организовать соревнование по метанию тапочек`,
     ]
-    // if (countWhatCanDo % timeWhatCanDo == 0) indexWhatCanDo = randomValue(0, listWhatCanDo.length - 1)
-    // console.log(indexWhatCanDo)
     return listWhatCanDo[randomValue(0, listWhatCanDo.length - 1)]
 }
 
