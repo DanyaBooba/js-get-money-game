@@ -1,12 +1,6 @@
 let money = +(sessionStorage.getItem('_money') ?? 0)
 let type = sessionStorage.getItem('_type') ?? 'руб.'
-let priceAutoIndex = +(sessionStorage.getItem('_auto') ?? 0)
-let priceAutoList = [
-    100,
-    200,
-    300
-]
-let priceAuto = priceAutoList[priceAutoIndex % priceAutoList.length]
+let priceAutoIndex = parseInt(sessionStorage.getItem('_auto') ?? 0)
 
 const moneyCount = () => money
 
@@ -29,12 +23,9 @@ const moneySet = value => {
 
 const moneySave = () => sessionStorage.setItem('_money', money)
 
-const moneyPriceAuto = () => {
-    priceAuto = priceAutoList[priceAutoIndex % priceAutoList.length]
-    return priceAuto
-}
+const moneyPriceAuto = () => parseInt((priceAutoIndex * Math.E * 130))
 
-const statusPrice = () => priceAutoIndex
+const statusPrice = () => parseInt(2 ** (priceAutoIndex - 1))
 
 const priceAdd = () => {
     priceAutoIndex += 1
