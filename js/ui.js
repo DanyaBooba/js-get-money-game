@@ -13,7 +13,7 @@ const updateMoney = () => {
 
 const updateButtonMoneyType = () => {
     const price = `<span class="button__price">${moneyPriceAuto()} ${moneyType()}</span>`
-    document.querySelector('.button-group button#button-boost').innerHTML = `+ 1 ${moneyType()}/сек. ${price}`
+    document.querySelector('#button-boost').innerHTML = `прокачка ${price}`
 }
 
 const updateButtonHalf = () => {

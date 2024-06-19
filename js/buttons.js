@@ -17,7 +17,7 @@ const buttonBoost = () => {
         moneyBuy(price)
         priceAdd()
     } else {
-        console.log('no money')
+        alert('Бабла не хватает.')
     }
 }
 

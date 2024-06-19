@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="body__left">
-        <button onClick="popup()">
+        <button onClick="popup()" id="popup-open">
             ?
         </button>
     </div>
@@ -31,7 +31,24 @@
         <div class="robot"></div>
     </div>
     <div class="popup">
-
+        <button onClick="popupClose()" class="popup__close">
+            X
+        </button>
+        <div class="popup__bg">
+            <div class="popup__content">
+                <h1>
+                    Бесконечная игра в кликер
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, obcaecati.
+                </p>
+                <ul>
+                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, consequatur.</li>
+                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, consequatur.</li>
+                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, consequatur.</li>
+                </ul>
+            </div>
+        </div>
     </div>
     <script src="/js/money.js"></script>
     <script src="/js/stats.js"></script>
