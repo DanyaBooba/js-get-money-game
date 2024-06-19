@@ -1,0 +1,27 @@
+body .body__left button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #cdcdcd;
+    font-family: monospace;
+    font-size: 2.5rem;
+    border: .3rem solid #cdcdcd;
+    border-radius: 50%;
+    padding: .5rem 1.2rem;
+    transition: .3s cubic-bezier(0, 0, 1, 1);
+}
+
+@media(hover: hover) {
+    body .body__left button:hover {
+        color: #000;
+        border-color: #000;
+    }
+}
+
+@media(hover: none) {
+    body .body__left button:active {
+        color: #000;
+        border-color: #000;
+    }
+}

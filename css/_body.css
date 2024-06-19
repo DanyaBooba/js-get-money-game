@@ -1,6 +1,6 @@
 body {
     display: flex;
-    gap: .5em;
+    gap: .5rem;
 }
 
 body div {
@@ -13,10 +13,10 @@ body div.body__center {
 
 @media(max-width: 425px) {
     body div.body__center {
-        margin-top: 5em;
+        margin-top: 5rem;
     }
 
     body {
-        padding: .5em;
+        padding: .5rem;
     }
 }

@@ -1,8 +1,8 @@
 .button-group {
     width: 100%;
     display: flex;
-    gap: 1em;
-    margin-bottom: 2em;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .button-group button {
@@ -13,9 +13,9 @@
     background-color: transparent;
     cursor: pointer;
     height: 50px;
-    border: .3em solid #fff;
+    border: .3rem solid #fff;
     font-family: monospace;
-    font-size: 1em;
+    font-size: 1rem;
     transition: .3s cubic-bezier(0, 0, 1, 1);
 }
 
@@ -32,15 +32,15 @@
 }
 
 .button-group button#button-half:focus-visible {
-    outline: .5em solid #423dff88;
+    outline: .5rem solid #423dff88;
 }
 
 .button-group button#button-add:focus-visible {
-    outline: .5em solid #2ed44b88;
+    outline: .5rem solid #2ed44b88;
 }
 
 .button-group button#button-boost:focus-visible {
-    outline: .5em solid #ff3c3c88;
+    outline: .5rem solid #ff3c3c88;
 }
 
 @media(hover: hover) {

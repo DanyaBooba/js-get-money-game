@@ -1,6 +1,6 @@
 .robot div {
     font-family: monospace;
     text-align: end;
-    padding: 1em 0;
-    border-bottom: .2em dotted #cdcdcd;
+    padding: 1rem 0;
+    border-bottom: .2rem dotted #cdcdcd;
 }
