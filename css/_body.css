@@ -4,12 +4,21 @@ body {
     margin: 0;
 }
 
-body div:not(.popup) {
+/* body div:not(.popup) {
+    flex: 1;
+} */
+
+body div.body__left {
+    flex: 1;
+}
+
+body div.body__right {
     flex: 1;
 }
 
 body div.body__center {
     margin-top: calc(100vh / 2 - 10%);
+    width: 400px;
 }
 
 .d-none {
@@ -18,12 +27,23 @@ body div.body__center {
     transition: .3s cubic-bezier(0, 0, 1, 1);
 }
 
-@media(max-width: 425px) {
-    body div.body__center {
-        margin-top: 5rem;
+@media(max-width: 768px) {
+    body {
+        flex-direction: column;
     }
 
-    body {
-        padding: .5rem;
+    body div.body__center {
+        margin-top: 5rem;
+        order: 60;
+        /* padding: 0 .5rem; */
+        width: 100%;
+    }
+
+    body div.body__left {
+        order: 40;
+    }
+
+    body div.body__right {
+        order: 50;
     }
 }

@@ -1,14 +1,12 @@
-const random = () => parseInt(Math.random() * 100 >= 90)
+const random = () => Math.random() * 100 >= 50
 
 const buttonHalf = () => {
-    if (moneyCount() < 100) {
-        alert(`Необходимо как минимум 100 ${moneyType()}`)
-    } else {
-        moneySet(random() ? moneyCount() * 2 : +(moneyCount() / 2))
-    }
+    moneyCount() < 100 ?
+        alert(`Необходимо как минимум 100 ${moneyType()}`) :
+        moneySet(random() ? moneyCount() * 2 : parseInt(moneyCount() / 2))
 }
 
-const buttonAdd = () => moneyAdd(1)
+const buttonAdd = () => moneyAdd(clickValueSec())
 
 const buttonBoost = () => {
     let money = moneyCount()

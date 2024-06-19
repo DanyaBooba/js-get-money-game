@@ -23,7 +23,7 @@ const moneySet = value => {
 
 const moneySave = () => sessionStorage.setItem('_money', money)
 
-const moneyPriceAuto = () => parseInt((priceAutoIndex * Math.E * 130))
+const moneyPriceAuto = () => parseInt(2.8 ** parseInt(priceAutoIndex))
 
 const statusPrice = () => parseInt(2 ** (priceAutoIndex - 1))
 
@@ -35,5 +35,7 @@ const priceAdd = () => {
 const priceSave = () => sessionStorage.setItem('_auto', priceAutoIndex)
 
 const randomValue = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
+
+const clickValueSec = () => priceAutoIndex > 0 ? 2 * priceAutoIndex : 1
 
 const resetMoney = () => moneySet(0)
